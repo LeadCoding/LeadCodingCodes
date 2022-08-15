@@ -1,3 +1,12 @@
+/* We need to design a HashSet Class which contains only Unique Values like any HashSet Class.
+Our HashSet class contains the following operations:
+a) void add(int key) --> Adds an element into the HashSet
+b) void remove(int key) --> Removes the key element from the HashSet
+c) bool contains(int key) --> Returns true if key is present in our HashSet else returns false
+Instead of using unneccessary space, we can use limited space by using the concept of Hashing & Chaining
+We require chaining to prevent collisions in our HashSet
+*/
+
 class MyHashSet {
     // We use a ArrayList of Linked List to store all our elements of HashSet Class
 	ArrayList<LinkedList<Integer>> list;
