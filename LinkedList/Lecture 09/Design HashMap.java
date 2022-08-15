@@ -1,4 +1,5 @@
-/* The HashMap class will be designed in the exactly same manner as HashSet Class
+/* 
+The HashMap class will be designed in the exactly same manner as HashSet Class
 The only difference here is that we need to store {key , value} pair in place of only key
 Again, to avoid collisions we will be using the concept of Hashing.
 Our vector will be of type <list<pair<int , int>> that is, a Doubly LinkedList which stores a pair of <int , int> in place of our normal int values
