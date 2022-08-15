@@ -8,6 +8,14 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+/* In Approach - 2, we will be discussing the Iterative Solution to remove Duplicates from Sorted LinkedList.
+In the iterative solution, we will using Temp pointer to iterate over the entire LinkedList. And we will stop whenever our Temp's Next become NULL, that is, we are standing at the Last Node of the LinkedList
+We will check if the values of adjacent nodes , that is , value pointed by Temp & value pointed by Temp's Next are same or not.
+If they are same, we will store Temp's Next Node in a Del pointer. And we make Temp's Next point to Del's Next. (If you have any issue understanding this part, please refer to the Lecture's Video or Article)
+And we will delete the Del Node.
+If the values are not same, in that part, we just need to move Temp to Temp's Next
+*/
+
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
 
