@@ -4,8 +4,8 @@ We need to fill k buckets(using all the elements) of nums[]. Sum of each bucket 
 By doing a bit maths, we can easily calculate the reqSum of each bucket, which is, (totalSum / k)
 we keep an array for sum of each partition and a boolean array to check whether an element 
 is already taken into some partition or not.
-"""
 
+"""
 class Solution:
     def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
         
@@ -64,29 +64,35 @@ class Solution:
         # if array sum is not divisible by K then we can't divide array into K partitions
         
         numsSum = 0
-        for i in range(n):
+        maxValue = 0
+        for i in range(len(nums)):
             numsSum += nums[i]
-        
+            maxValue = max(maxValue, nums[i])
+            
         if numsSum % k != 0:
+            return False
+        
+        # edge cases 
+        
+        if max(nums) > numsSum // k:
             return False
         
         # the required sum of each subset = sum / K
         
-        reqSum = numsSum / k
+        reqSum = numsSum // k
         
         # Initialize sum of each subset from 0
         
-        subsetSum = [0 for i in range(k+1)]
+        subsetSum = [0 for i in range(k)]
         
         # mark all elements as not taken
         
         taken = [False for i in range(n)]
         
+        subsetSum[0] = nums[n-1]
+        taken[n-1] = True
         # call recursive method to check K-substitution condition
         
-        subsetSum[0]=nums[n - 1]
-        
-        taken[n - 1]=True
         
         return helper(taken, reqSum, 0, n-1)
     

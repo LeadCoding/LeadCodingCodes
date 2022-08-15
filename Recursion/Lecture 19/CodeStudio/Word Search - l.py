@@ -47,7 +47,9 @@ def present(board, word, n, m):
         # As we need to find the word, no matter from which direction we get it, so we return (op1 OR op2 OR op3 OR op4)
 
         return op1 or op2 or op3 or op4
-    
+
+    # present function scope
+        
     for i in range(n):
         for j in range(m):
             

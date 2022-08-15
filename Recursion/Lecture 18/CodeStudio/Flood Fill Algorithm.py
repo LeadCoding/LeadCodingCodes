@@ -30,6 +30,7 @@ def floodFill(image, x, y, newColor):
         
         flood(i, j-1, n, m) 
         
+    # floodFill function scope
     #  it is denoting the oldcolor
     
     oldColor = image[x][y]

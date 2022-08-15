@@ -66,7 +66,8 @@ def searchMaze(arr, n):
             
             arr[i][j] = 1 ;
     
-
+    # searchMaze function scope
+    
     ans = []
     
     # taking path list as python string is im-mutable, making it dificult to pop() during backtracking 

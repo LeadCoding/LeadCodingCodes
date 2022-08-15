@@ -49,6 +49,8 @@ class Solution:
 
             return op1 or op2 or op3 or op4
         
+        # exist function scope
+        
         n, m = len(board), len(board[0])
         
         for i in range(n):
