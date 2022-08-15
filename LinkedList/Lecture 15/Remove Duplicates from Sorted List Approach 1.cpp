@@ -1,3 +1,12 @@
+
+/* 
+In Approach - 1, we will be discussing the Recursive Solution to remove Duplicates from Sorted LinkedList.
+We will check for the values of pointed by Head and Head's Next pointer.
+If their values match, then we don't need to include Head in our LinkedList
+Otherwise, if the values don't match, then we make Head's Next point to the New-Head pointer given to us by Recursion.
+If at any moment our Head has become NULL or our Head's Next is pointing to NULL, that is, we are standing on the Last Node, in that scenario, we will simoly return Head without moving further
+*/
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -8,12 +17,6 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-/* In Approach - 1, we will be discussing the Recursive Solution to remove Duplicates from Sorted LinkedList.
-We will check for the values of pointed by Head and Head's Next pointer.
-If their values match, then we don't need to include Head in our LinkedList
-Otherwise, if the values don't match, then we make Head's Next point to the New-Head pointer given to us by Recursion.
-If at any moment our Head has become NULL or our Head's Next is pointing to NULL, that is, we are standing on the Last Node, in that scenario, we will simoly return Head without moving further
-*/
 
 class Solution {
 public:
